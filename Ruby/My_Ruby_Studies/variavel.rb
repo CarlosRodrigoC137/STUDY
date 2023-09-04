@@ -62,12 +62,14 @@ third_user.add("Carlos")
 
 # VARIÁVEIS DE CLASSE
 # use-se '@@'
-#Não é mito comum, pode ser auterada dentro da classe
-#ou ao interagir com ela
+# É iniciada fora de qualquer método.
+# pode ser usada e auterada por qualquer instância(objeto) da classe.
+# No caso acima todos os objetos compartilham o @@user_count
+
 system "clear"
 
-class DefinindoUser
-    def addUser(name)
+class User
+    def addName(name)
         @name = name
         puts "User adicionado"
         hello
@@ -75,7 +77,22 @@ class DefinindoUser
     def hello
         puts "Seja bem vindo #{@name}"
     end
+
 end
 
-user = DefinindoUser.new
-user.addUser("Alexa")
+user1 = User.new
+user1.addName("Alexa")
+user2 = User.new
+user2.addName("Beatriz")
+
+puts user1.hello, user2.hello
+
+# VARIÁVEIS DE INSTÂNCIA
+# USE-SE '@'
+#A variável de instância pertênce apenas a instância (objeto) ao qual foi chamada.
+#Os objetos podem chamar a mesma V.I 
+#para gerar uma nova instância para si, 
+#mas não compartilhar uns com os outros
+
+# Cada objeto, "user1" e "user2", continua inalterado 
+#mesmo usando a mesma instância "@name"
