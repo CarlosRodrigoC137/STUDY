@@ -129,3 +129,29 @@ dog = Dog.new
 dog.name = "Alexa"
 dog.age = "1 ano"
 puts dog.name, dog.age
+
+#Para não preceisar definir e preencher a variável de instância,
+#Usamos a definição de atributo 'attr_accessor :atributeName'
+#O que o attr_acessor faz é gerar os dois defs acima, para definir e preencher.
+system 'clear'
+
+class Person
+    def initialize(name, age, country)
+        @name = name
+        @age = age
+        @country = country
+    end
+
+    def checkInformation
+        puts "Instância iniciada com valores:",
+        "Name = #{@name}", "Age = #{@age}", "Country = #{@country}"
+    end
+end
+
+person = Person.new("Alexa", 18, "País das Maravilhas")
+person.checkInformation
+
+#Constructor: usar o constructor, a classe com o método padrão
+# initialize permite que o programa seja iniciado com a definição de instâncias,
+# assim como, a definição dos parâmetros no método ".new" ao criar um objeto.
+
