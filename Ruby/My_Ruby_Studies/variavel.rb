@@ -90,9 +90,42 @@ puts user1.hello, user2.hello
 # VARIÁVEIS DE INSTÂNCIA
 # USE-SE '@'
 #A variável de instância pertênce apenas a instância (objeto) ao qual foi chamada.
-#Os objetos podem chamar a mesma V.I 
+#Os objetos podem chamar a mesma V.I, através dos métodos apenas,
 #para gerar uma nova instância para si, 
 #mas não compartilhar uns com os outros
 
 # Cada objeto, "user1" e "user2", continua inalterado 
-#mesmo usando a mesma instância "@name"
+#mesmo usando a mesma V.instância "@name"
+
+system "clear"
+
+#Contiuação Variável de Instância:
+#Atributos:
+
+class Dog
+    def name
+        @name
+        #define a variável de instância
+    end
+    def name= name
+        @name = name
+        #preenche a variável de instância name
+    end
+    
+end
+
+dog = Dog.new
+dog.name = "Alexa"
+puts dog.name
+
+#o método acima é muito demorado e complicado.
+system 'clear'
+
+class Dog
+    attr_accessor :name, :age
+end
+
+dog = Dog.new
+dog.name = "Alexa"
+dog.age = "1 ano"
+puts dog.name, dog.age
