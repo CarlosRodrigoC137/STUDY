@@ -133,6 +133,8 @@ puts dog.name, dog.age
 #Para não preceisar definir e preencher a variável de instância,
 #Usamos a definição de atributo 'attr_accessor :atributeName'
 #O que o attr_acessor faz é gerar os dois defs acima, para definir e preencher.
+
+#tem outros atributos como read and write, além do accessor;
 system 'clear'
 
 class Person
