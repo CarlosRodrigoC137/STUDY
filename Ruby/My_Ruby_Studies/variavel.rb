@@ -130,7 +130,7 @@ dog.name = "Alexa"
 dog.age = "1 ano"
 puts dog.name, dog.age
 
-#Para não preceisar definir e preencher a variável de instância,
+#Para não precisar definir e preencher a variável de instância,
 #Usamos a definição de atributo 'attr_accessor :atributeName'
 #O que o attr_acessor faz é gerar os dois defs acima, para definir e preencher.
 

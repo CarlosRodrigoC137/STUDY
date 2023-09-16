@@ -29,3 +29,33 @@ imprimir = NormalWorld::Imprimir.new
 imprimir.Impressora "The name is Alexa."
 
 NormalWorld::puts "Funcionou"
+
+#mais um exemplo de modules:
+system 'clear'
+
+module Person
+    class Juridic
+        def initialize(name, cnpj)
+            @name = name
+            @cnpj = cnpj
+        end
+        def add
+            puts 'Pessoa Jurídica Adicionada'
+            puts "nome: #{@name}"
+            puts "cnpj: #{@cnpj}"
+        end
+    end
+    class Physical
+        def initialize(name, cnpj)
+            @name = name
+            @cpf = cpf
+        end
+        def add
+            puts 'Pessoa Física Adicionada'
+            puts "nome: #{@name}"
+            puts "cpf: #{@cpf}"
+        end
+    end
+end
+
+Person::Juridic.new('M. C. Investimentos', '4241.123/0001').add
