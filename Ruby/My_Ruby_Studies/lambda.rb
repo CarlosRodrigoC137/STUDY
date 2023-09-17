@@ -8,7 +8,6 @@ first_lambda.call
 
 first_lambda = -> (names) { names.each { |name| puts name} }
 # dá pra criar uma lambda usando o símbolo '= ->', ao invés de escrever 'lambda'
-#isso permite passar parâmetros sem precisar do Do-End
 # o lambda acima recebe o parâmetro 'names'
 names = ['Alexa', 'Beatriz', 'Carlos']
 
@@ -48,7 +47,8 @@ system 'clear'
 
 #Usando o método capitalize, para relembrar Lambda:
 
-name_lambda = -> (name_string) {puts name_string.capitalize}
+# name_lambda = -> (name_string) {puts name_string.capitalize}
+name_lambda = lambda { |name_string| puts name_string.capitalize }
 
 def capitalize_name(name_lambda, name_string)
     name_lambda.call(name_string)
